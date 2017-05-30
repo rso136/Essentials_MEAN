@@ -18,6 +18,7 @@ app.controller('listCtrl', function($scope, $rootScope, $http, $location) {
 		$rootScope.logMenu = true;
 		$rootScope.defBrand = false;
 		$rootScope.loginBrand = true;
+		$rootScope.resBtn = true;
 
 		$scope.email = response.data.user_email;
 		$scope.userID = response.data.user_id;

@@ -20,6 +20,7 @@ app.controller('sessCtrl', function($scope, $rootScope, $http, $sce, $location) 
 		$rootScope.logMenu = true;
 		$rootScope.defBrand = false;
 		$rootScope.loginBrand = true;
+		$rootScope.resBtn = true;
 
 		$scope.email = response.data.user_email;
 		$scope.userID = response.data.user_id;
