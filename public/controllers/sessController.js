@@ -85,6 +85,9 @@ app.controller('sessCtrl', function($scope, $rootScope, $http, $sce, $location) 
 		$http.post('/itemcreate', {userID: userID, email: email, item: item, category: category, quantity: quantity}).success(function(response) {
 
 			console.log(response);
+			$scope.item = "";
+			$scope.category = "";
+			$scope.quantity = "";
 
 		}).error(function(response) {
 			console.log('error: ' + response);
@@ -128,9 +131,7 @@ app.controller('sessCtrl', function($scope, $rootScope, $http, $sce, $location) 
 			console.log('error: ' + response);
 		});
 
-		$scope.item = "";
-		$scope.category = "";
-		$scope.quantity = "";
+
 	}
 
 	$scope.delete = function(itemID) {
