@@ -1,0 +1,113 @@
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-12" id="infoBox">
+        <h2 id="invHeading"><b>MY INVENTORY</b> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-12" id="submitBox">
+        <br>
+        <form ng-submit="submitItem();">
+            <div class="form-group">
+                <input ng-model="item" class="form-control" placeholder="Item" maxlength="15" id="nameVal" required>
+            </div>
+            <div class="form-group" id="selectDiv">
+                <select ng-model="category" class='form-control' id="catVal" required>
+                	<option value="">Select a Category</option>
+                    <option value="foodandbeverage">Food & Beverage</option>
+                    <option value="disposables">Disposables</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input ng-model="quantity" class="form-control" type="number" min="1" max="1000" placeholder="Quantity" id="quantVal" required>
+            </div>
+            <button class='btn btn-submit btn-block' id="submitItem">ADD ITEM <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+            <br>
+            <a class='btn btn-shopping btn-block' href="/#/list">SHOPPING LIST</a>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 col-md-offset-5 col-xs-12" id="statusBox">
+    </div>
+</div>
+<div class="row">
+    <br>
+    <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-12" id="sortBox">
+        <li class='list-group-item'>
+            <p><b>SORT LISTS</b></p>
+            <span ng-click="sortNumD();" class="glyphicon glyphicon-sort-by-attributes sort descending sort" aria-hidden="true"></span> <span ng-click="sortNumA();" class="glyphicon glyphicon-sort-by-attributes-alt sort ascending sort" aria-hidden="true"></span> <span ng-click="sortABC();" class="glyphicon glyphicon-sort-by-alphabet sort alphabetical sort" aria-hidden="true"></span>
+        </li>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+        <br>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 col-md-offset-3 col-sm-4 col-xs-12" id="boxA">
+        <div class="headingDiv">
+            <h3><span class="glyphicon glyphicon-cutlery" id="fbIcon" aria-hidden="true"></span></h3>
+            <h3 class="headings">Food & Beverage</h3>
+        </div>
+        <div id="fbBox">
+            <h4 ng-show='FBplaceHolder'><i>'Food & Beverage' inventory is currently empty</i></h4>
+            <ul class='list-group'>
+	            <li ng-repeat='x in fbArr track by $index' for="{{x}}" class='list-group-item res'>
+	                <div class='removeRow'><span ng-click="delete(x._id);" class='glyphicon glyphicon-remove deleteFB' aria-hidden='true'></span>
+	                    
+
+	                </div><span class='crItem'>{{x.item}}</span> : <span class='crQuant'>{{x.quantity}}</span>
+	                	<!-- <input ng-model="newObject[x.item]" type="hidden"> -->
+		                <br>
+		                <button ng-click="x.quantity = x.quantity-1; decItem(x.item, x.quantity);" class='btn btn-adjustA btn-sm subBtn btnSubFB'><span class='glyphicon glyphicon-minus' aria-hidden='true'></span></button>
+		                <button ng-click="x.quantity = x.quantity+1; incItem(x.item, x.quantity);" class='btn btn-sm btn-adjustB subBtn btnAddFB'><span class='glyphicon glyphicon-plus' aria-hidden='true'></span></button>
+	            </li>
+	        </ul> 
+       </div>
+	</div>
+    <div class="col-md-2 col-sm-4 col-xs-12" id="boxB">
+        <div class="headingDiv">
+            <h3><span class="glyphicon glyphicon-trash" id="dispIcon" aria-hidden="true"></span></h3>
+            <h3 class="headings">Disposables</h3>
+        </div>
+        <div id="disposablesBox">
+            <h4 ng-show='dispPlaceHolder'><i>'Disposables' inventory is currently empty</i></h4>
+              <ul class='list-group'>
+	            <li ng-repeat='x in dispArr track by $index' class='list-group-item res'>
+	                <div class='removeRow'><span ng-click="delete(x._id);" class='glyphicon glyphicon-remove deleteFB' aria-hidden='true'></span>
+	                    <input class='itemID' type='hidden' name='itemID'>
+	                </div><span class='crItem'>{{x.item}}</span> : <span class='crQuant'>{{x.quantity}}</span>
+	                <input class='itemName' type='hidden' name='item'>
+	                <br>
+	                <button ng-click="x.quantity = x.quantity-1; decItem(x.item, x.quantity);" class='btn btn-adjustA btn-sm subBtn btnSubDisp'><span class='glyphicon glyphicon-minus' aria-hidden='true'></span></button>
+	                <button ng-click="x.quantity = x.quantity+1; incItem(x.item, x.quantity);" class='btn btn-sm btn-adjustB subBtn btnAddDisp'><span class='glyphicon glyphicon-plus' aria-hidden='true'></span></button>
+	            </li>
+	        </ul>    
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-12" id="boxC">
+        <div class="headingDiv">
+            <h3><span class="glyphicon glyphicon-home" id="otherIcon" aria-hidden="true"></span></h3>
+            <h3 class="headings">Other</h3>
+        </div>
+        <div id="otherBox">
+            <h4 ng-show='otherPlaceHolder'><i>'Other' inventory is currently empty</i></h4>
+              <ul class='list-group'>
+	            <li ng-repeat='x in otherArr track by $index' class='list-group-item res'>
+	                <div class='removeRow'><span ng-click="delete(x._id);" class='glyphicon glyphicon-remove deleteFB' aria-hidden='true'></span>
+	                    <input class='itemID' type='hidden' name='itemID'>
+	                </div><span class='crItem'>{{x.item}}</span> : <span class='crQuant'>{{x.quantity}}</span>
+	                <input class='itemName' type='hidden' name='item'>
+	                <br>
+	                <button ng-click="x.quantity = x.quantity-1; decItem(x.item, x.quantity);" class='btn btn-adjustA btn-sm subBtn btnSubOther'><span class='glyphicon glyphicon-minus' aria-hidden='true'></span></button>
+	                <button ng-click="x.quantity = x.quantity+1; incItem(x.item, x.quantity);" class='btn btn-sm btn-adjustB subBtn btnAddOther'><span class='glyphicon glyphicon-plus' aria-hidden='true'></span></button>
+	            </li>
+	        </ul>    
+        </div>
+    </div>
+</div>
+</div>

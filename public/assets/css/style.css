@@ -1,0 +1,680 @@
+html {
+	height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 28rem;
+  font-family: 'Muli', sans-serif;
+}
+
+/*.jumbotron {
+	height: 60vh;
+	background-color: #000000;
+}*/
+
+#testRow {
+	margin-top: 100px;
+	text-align: center;
+}
+
+#testRowB {
+	text-align: center;
+}
+
+#testRowC {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.jumbotron {
+	height: 60vh;
+    width: 100%;
+    /*max-height: 50%;*/
+    max-width: 100%;
+    min-height: 20%;
+    min-width: 30%;
+    background-size: cover;
+    background-image: url("../images/banner2.jpg");
+    /*font-family: 'Playfair Display', serif;*/
+    font-family: 'Architects Daughter', cursive;
+    text-align: center;
+}
+
+#jumboHeading {
+	margin-top: 40px;
+	margin-left: 42vw;
+	color: #BAB3AD;
+	font-size: 6em;
+	text-shadow: 2px 2px 4px #000000;
+	letter-spacing: 4px;
+}
+
+#headingSub {
+	margin-left: 42vw;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 4px #000000;
+	font-size: 2em;
+}
+
+#jumboSub {
+	margin-left: 42vw;
+	color: #BAB3AD;
+	text-shadow: 2px 2px 4px #000000;
+	font-size: 3em;
+
+}
+
+.navbar-custom {
+	background-color: #3A3A3A;
+}
+
+.navbar-brand {
+	margin-right: 1vw;
+	text-shadow: 2px 2px 4px #000000;
+	color: #fff;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.userInfo {
+	font-family: 'Muli', sans-serif;
+}
+
+.navbar-custom > .container-fluid > a {
+  color: #fff;
+}
+
+.navbar-collapse > ul.navbar-nav > li.menuOption > a {
+  color: #fff;
+}
+
+.navbar-collapse > ul.navbar-nav > li.menuOption > a:hover {
+	background-color: #3A3A3A;
+}
+
+.navbar-collapse > ul.navbar-nav > li.menuOption > a:visited {
+	background-color: #3A3A3A;
+}
+
+.navbar-collapse > ul.navbar-nav > li.menuOption > a:active {
+	background-color: #3A3A3A;
+}
+
+.navbar-header > .navbar-toggle > .icon-bar {
+	background-color: #fff;
+}
+
+.btn-jumbo {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Muli', sans-serif;
+	margin-left: 42vw;
+	margin-top: 20px;
+	border-radius: 0;
+	display: inline-block;
+}
+
+.btn-jumbo:hover {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-jumbo:visted {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-jumbo:active {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-jumboB {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Muli', sans-serif;
+	margin-top: 20px;
+	margin-left: 30px;
+	border-radius: 0;
+	display: inline-block;
+}
+
+.btn-jumboB:hover {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-jumboB:visted {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-jumboB:active {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-login {
+	background-color: #000000;
+	color: #fff;
+}
+
+.btn-login:hover {
+	background-color: #000000;
+	color: #fff;
+}
+
+.btn-login:visited {
+	background-color: #000000;
+	color: #fff;
+}
+
+.btn-login:active {
+	background-color: #000000;
+	color: #fff;
+}
+
+.btn-signup {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-signup:hover {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+
+.btn-signup:visited {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+
+.btn-signup:active {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+
+.btn-logout {
+	background-color: #000000;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-logout:hover {
+	background-color: #000000;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-logout:visited {
+	background-color: #000000;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-logout:active {
+	background-color: #000000;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-submit {
+	background-color: #000000;
+	color: #fff;
+}
+
+.btn-submit:hover {
+	background-color: #000000;
+	color: #fff;
+}
+
+
+.btn-submit:visited {
+	background-color: #000000;
+	color: #fff;
+}
+
+
+.btn-submit:active {
+	background-color: #000000;
+	color: #fff;
+}
+
+
+.errorMsg {
+	color: red;
+}
+
+#valFailMsg {
+	color: red;
+}
+
+.btn-shopping {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-shopping:hover {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-shopping:visited {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-shopping:active {
+	background-color: #BAB3AD;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-buy {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-buy:hover {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-buy:visited {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-buy:active {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-adjustA {
+	background-color: #BAB3AD;
+	color: #fff;
+	margin: 5px 2px 0 2px;
+}
+
+.btn-adjustA:hover {
+	background-color: #BAB3AD;
+	color: #fff;
+	margin: 5px 2px 0 2px;
+}
+
+
+.btn-adjustA:visited {
+	background-color: #BAB3AD;
+	color: #fff;
+	margin: 5px 2px 0 2px;
+}
+
+
+.btn-adjustA:active {
+	background-color: #BAB3AD;
+	color: #fff;
+	margin: 5px 2px 0 2px;
+}
+
+
+.btn-adjustB {
+	background-color: #000000;
+	color: #fff;
+	margin: 5px 2px 0 2px;
+}
+
+.btn-adjustB:hover {
+	background-color: #000000;
+	color: #fff;
+	margin: 5px 2px 0 2px;
+}
+
+.btn-adjustB:visited {
+	background-color: #000000;
+	color: #fff;
+	margin: 5px 2px 0 2px;
+}
+
+.btn-adjustB:active {
+	background-color: #000000;
+	color: #fff;
+	margin: 5px 2px 0 2px;
+}
+
+.btn-remove {
+	margin-top: 10px;
+	background-color: #c63e37;
+}
+
+.btn-remove:hover {
+	margin-top: 10px;
+	background-color: #c63e37;
+}
+
+
+.btn-remove:visited {
+	margin-top: 10px;
+	background-color: #c63e37;
+}
+
+.btn-remove:active {
+	margin-top: 10px;
+	background-color: #c63e37;
+}
+
+
+.removeRow {
+	text-align: right;
+	padding-top: 4px;
+}
+
+#hamburger {
+	border-color: transparent;
+}
+
+#loginBox, #submitBox {
+	text-align: center;
+}
+
+#guestLogin {
+	cursor: pointer;
+}
+
+#sortBox {
+	text-align: center;
+}
+
+#description {
+	margin-top: 7vh;
+	padding-top: 7vh;
+	padding-bottom: 7vh;
+	background-color: #3A3A3A;
+	color: #fff;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.sort {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.deleteFB, .deleteDisp, .deleteOther {
+	cursor: pointer;
+}
+
+/*.list-group-item {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+	padding: 0 5px 20px 20px;
+}
+*/
+.res {
+	background-color: #3A3A3A;
+	color: #fff;
+	text-shadow: 2px 2px 4px #000000;
+	padding: 0 5px 20px 20px;
+	margin-bottom: 20px;
+}
+
+#infoBox {
+	text-align: center;
+	margin-top: 10vh;
+}
+
+#listHeading {
+	font-family: 'Architects Daughter', cursive;
+	margin-top: 12vh;
+}
+
+.mobMenu {
+	display: none;
+}
+
+.listRow, .listHeadingRow {
+	font-family: 'Architects Daughter', cursive;
+	text-align: center;
+}
+
+.listLabel {
+	font-size: 2em;
+}
+
+.shopInputBox {
+	margin-bottom: 20px;
+}
+
+#backInvLink {
+	text-decoration: none;
+	color: #000000;
+}
+
+.sort {
+	cursor: pointer;
+}
+
+/*.listInput {
+	float: right;
+}*/
+
+#goBackRow {
+	margin-top: 8vh;
+}
+
+#signUpLink {
+	font-family: 'Muli', sans-serif;
+}
+
+#signUpATag {
+	text-decoration: none;
+	color: #fff;
+}
+
+.subForm, .addForm {
+	display: inline;
+}
+
+.headingDiv, #fbBox, #disposablesBox, #otherBox, #shoppingHeading, #shoppingBox, #goBackRow, .backRow, #signUpSuccessBox, #signUpFailBox, #description, #aboutHeading {
+	text-align: center;
+}
+
+.emptyBox {
+	padding: 18px 0 18px 0;
+}
+
+#invHeading {
+	font-family: 'Architects Daughter', cursive;
+}
+
+.shoppingItem {
+	margin: 5px 10px 10px 10px;
+	padding: 5px 20px 20px 20px;
+	margin-top: 30px;
+	border-style: outset;
+	border-width: thin;
+	border-radius: 5px;
+
+}
+
+.placeHolder {
+	margin: 10px 10px 10px 10px;
+	padding: 47px;
+	border-style: outset;
+	border-width: thin;
+
+}
+
+.appleImg {
+	margin: 0 auto;
+}
+
+#aboutBox {
+	margin-top: 10vh;
+	font-size: 1.2em;
+}
+
+#aboutProfile {
+	float: left;
+	margin-right: 20px;
+}
+
+#aboutHeading {
+	font-family: 'Architects Daughter', cursive;
+}
+
+#footer {	
+  height: 85px;
+  background-color: #1c1c1c;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*#copyright {
+  margin-top: 25px;
+}*/
+
+ul li {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+ul.techStack li {
+	text-align: left;
+	text-transform: none;
+}
+
+#signature {
+	font-family: 'Satisfy', cursive;
+}
+
+#aboutProfile {
+	margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+
+	.placeHolder, .shoppingItem {
+		margin: 10px 0 10px 0;
+	}
+
+	.brandSpace {
+		display: none;
+	}
+
+	.jumbotron {
+		height: 380px;
+	}
+
+	#jumboHeading {
+		font-size: 3em;
+		margin: 80px auto 0 auto;
+	}
+
+	#headingSub {
+		font-size: 1.5em;
+		margin: 10px auto 0 auto;
+	}
+
+	#jumboSub {
+		font-size: 2em;
+		margin: 0 auto;
+	}
+
+	.btn-jumbo {
+		margin: 20px auto 0 auto;
+	}
+
+	.btn-jumboB {
+		margin: 20px 0 0 15px;
+	}
+
+	.userInfo {
+		font-size: .90em;
+	}
+
+	#aboutProfile {
+		margin-bottom: 0;
+	}	
+
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+	.jumbotron {
+		height: 400px;
+	}
+
+	#jumboHeading {
+		margin: 80px auto 0 auto;
+	}
+
+	#headingSub {
+		font-size: 1.5em;
+		margin: 10px auto 0 auto;
+	}
+
+	#jumboSub {
+		margin: 0 auto;
+	}
+
+	.btn-jumbo {
+		margin: 20px auto 0 auto;
+	}
+
+	/*#fbBox, #disposablesBox, #otherBox {
+		margin-top: 40px;
+	}*/
+
+	#fbHeading, #dispHeading, #otherHeading {
+		font-size: 1.5em;
+	}
+
+	.headings {
+		font-size: 1.2em;
+	}
+
+	.crItem {
+		font-size: .8em;
+	}
+
+	.crQuant {
+		font-size: .8em;
+	}
+
+	.shoppingItem > h4 {
+		font-size: 1em;
+	}
+
+	#aboutProfile {
+		margin-bottom: 75px;
+	}	
+}

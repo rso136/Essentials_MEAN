@@ -1,0 +1,70 @@
+<div class="container-fluid">
+<div class="row listHeadingRow">
+    <div class="col-md-12 col-xs-12">
+        <h2 id='listHeading'><b>MY SHOPPING LIST</b>  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></h2>
+    </div>
+</div>
+<div class="row backRow">
+    <div class="col-md-12 col-xs-12">
+        <a href='/#/home' id='backInvLink'><h4><span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span> Back to Inventory</h4></a>
+    </div>
+</div>
+<div class="row listRow">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <br>
+        <h2 id="fbHeading"><b>Food & Beverages</b></h2>
+        <br>
+        <h3 ng-show="fbListPlaceHolder"><i>'Food & Beverage' shopping list is currently empty</i></h3>
+        <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12" id="shopListFB">
+            <div ng-repeat='x in fbArrList' for="{{x}}" class='shoppingItem'>
+            <form ng-submit="buyItem(buyAmtFB, x.item);">
+                <h4>{{x.item}}</h4>
+                <div class='col-md-8 col-md-offset-2 col-xs-6 col-xs-offset-3 shopInputBox'>
+                    <input ng-model="buyAmtFB" class='form-control itemQuantity' type='number' min='1' max='1000' required>
+                </div>
+                <button type="submit" class='btn btn-buy btn-block buyBtnFB'>BUY</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <br>
+        <h2 id="dispHeading"><b>Disposables</b></h2>
+        <br>
+        <h3 ng-show="dispListPlaceHolder"><i>'Disposables' shopping list is currently empty</i></h3>
+        <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12" id="shopListDisp">
+        	<div ng-repeat='y in dispArrList' for="{{y}}" class='shoppingItem'>
+                <form ng-submit="buyItem(buyAmtDisp, y.item);">
+                <h4>{{y.item}}</h4>
+                <div class='col-md-8 col-md-offset-2 col-xs-6 col-xs-offset-3 shopInputBox'>
+                    <input ng-model="buyAmtDisp" class='form-control itemQuantity'  type='number' min='1' max='1000' required>
+                </div>
+                <button type="submit" class='btn btn-buy btn-block buyBtnFB'>BUY</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <br>
+        <h2 id="otherHeading"><b>Other</b></h2>
+        <br>
+        <h3 ng-show="otherListPlaceHolder"><i>'Other' shopping list is currently empty</i></h3>
+        <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12" id="shopListOther">
+        	<div ng-repeat='z in otherArrList' for="{{z}}" class='shoppingItem'>
+                <form ng-submit="buyItem(buyAmtOther, z.item);">
+                <h4>{{z.item}}</h4>
+                <div class='col-md-8 col-md-offset-2 col-xs-6 col-xs-offset-3 shopInputBox'>
+                    <input ng-model="buyAmtOther" class='form-control itemQuantity'  type='number' min='1' max='1000' required>
+                </div>
+                <button type="submit" class='btn btn-buy btn-block buyBtnFB'>BUY</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row backRow">
+    <div class="col-md-12 col-xs-12">
+        <!-- <a href='home.php'><h4><span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span> Back to Inventory</h4></a> -->
+    </div>
+</div>
+</div>
