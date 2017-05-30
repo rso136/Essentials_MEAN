@@ -127,6 +127,10 @@ app.controller('sessCtrl', function($scope, $rootScope, $http, $sce, $location) 
 		}).error(function(response) {	
 			console.log('error: ' + response);
 		});
+
+		$scope.item = "";
+		$scope.category = "";
+		$scope.quantity = "";
 	}
 
 	$scope.delete = function(itemID) {
