@@ -12,62 +12,66 @@ app.controller('sessCtrl', function($scope, $rootScope, $http, $sce, $location) 
 			$location.path('/')
 		}
 
-		console.log('Session email: ' + response.data.user_email);
-		console.log('Session id: ' + response.data.user_id);
+		if (response.data.logged_in == true) {
 
-		$rootScope.userEmail = response.data.user_email;
-		$rootScope.userInfo = true;
-		$rootScope.logMenu = true;
-		$rootScope.defBrand = false;
-		$rootScope.loginBrand = true;
-		$rootScope.resBtn = true;
+			console.log('Session email: ' + response.data.user_email);
+			console.log('Session id: ' + response.data.user_id);
 
-		$scope.email = response.data.user_email;
-		$scope.userID = response.data.user_id;
+			$rootScope.userEmail = response.data.user_email;
+			$rootScope.userInfo = true;
+			$rootScope.logMenu = true;
+			$rootScope.defBrand = false;
+			$rootScope.loginBrand = true;
+			$rootScope.resBtn = true;
 
-		var userIDInit = response.data.user_id;
+			$scope.email = response.data.user_email;
+			$scope.userID = response.data.user_id;
 
-		$http.get('/inventory/' + userIDInit).success(function(response) {
-			console.log(response);
-			console.log(response.length);
-			$scope.fbArr = [];
-			$scope.dispArr = [];
-			$scope.otherArr = [];
-			
-			$scope.FBplaceHolder = false;
-			$scope.dispPlaceHolder = false;
-			$scope.otherPlaceHolder = false;
+			var userIDInit = response.data.user_id;
 
-			for (var i = 0; i < response.length; i++) {
-				console.log(response[i].category);
-				if (response[i].category == "foodandbeverage" && response[i].shopping == 0) {
-					$scope.fbArr.push(response[i]);	
+			$http.get('/inventory/' + userIDInit).success(function(response) {
+				console.log(response);
+				console.log(response.length);
+				$scope.fbArr = [];
+				$scope.dispArr = [];
+				$scope.otherArr = [];
+				
+				$scope.FBplaceHolder = false;
+				$scope.dispPlaceHolder = false;
+				$scope.otherPlaceHolder = false;
+
+				for (var i = 0; i < response.length; i++) {
+					console.log(response[i].category);
+					if (response[i].category == "foodandbeverage" && response[i].shopping == 0) {
+						$scope.fbArr.push(response[i]);	
+					}
+
+					if (response[i].category == "disposables" && response[i].shopping == 0) {
+						$scope.dispArr.push(response[i]);
+					}
+
+					if (response[i].category == "other" && response[i].shopping == 0) {
+						$scope.otherArr.push(response[i]);
+					}
 				}
 
-				if (response[i].category == "disposables" && response[i].shopping == 0) {
-					$scope.dispArr.push(response[i]);
+				if ($scope.fbArr.length == 0) {
+				 	$scope.FBplaceHolder = true;
 				}
 
-				if (response[i].category == "other" && response[i].shopping == 0) {
-					$scope.otherArr.push(response[i]);
+				if ($scope.dispArr.length == 0) {
+				 	$scope.dispPlaceHolder = true;
 				}
-			}
 
-			if ($scope.fbArr.length == 0) {
-			 	$scope.FBplaceHolder = true;
-			}
+				if ($scope.otherArr.length == 0) {
+				 	$scope.otherPlaceHolder = true;
+				}
 
-			if ($scope.dispArr.length == 0) {
-			 	$scope.dispPlaceHolder = true;
-			}
+			}).error(function(response) {	
+				console.log('error: ' + response);
+			});
 
-			if ($scope.otherArr.length == 0) {
-			 	$scope.otherPlaceHolder = true;
-			}
-
-		}).error(function(response) {	
-			console.log('error: ' + response);
-		});
+		}
 	
 	});
 
