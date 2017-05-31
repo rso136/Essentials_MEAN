@@ -7,11 +7,12 @@ app.controller('listCtrl', function($scope, $rootScope, $http, $location) {
 
 		if (response.data.logged_in != true) {
 			console.log('Not logged in');
-			$http.get('/logout').success(function(response){
-				console.log('Destroying session');
-				$location.path('/');
-			});
-			
+			$location.path('/');
+			$rootScope.userInfo = false;
+			$rootScope.logMenu = false;
+			$rootScope.defBrand = true;
+			$rootScope.loginBrand = false;
+			$rootScope.resBtn = false;
 		}
 		
 		console.log('Session email: ' + response.data.user_email);
