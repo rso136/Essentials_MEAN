@@ -9,11 +9,6 @@ app.controller('sessCtrl', function($scope, $rootScope, $http, $sce, $location) 
 
 		if (response.data.logged_in != true) {
 			console.log('Not logged in');
-			$rootScope.userInfo = false;
-			$rootScope.logMenu = false;
-			$rootScope.defBrand = true;
-			$rootScope.loginBrand = false;
-			$rootScope.resBtn = false;
 			$location.path('/');
 		}
 

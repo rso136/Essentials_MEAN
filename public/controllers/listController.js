@@ -7,11 +7,6 @@ app.controller('listCtrl', function($scope, $rootScope, $http, $location) {
 
 		if (response.data.logged_in != true) {
 			console.log('Not logged in');
-			$rootScope.userInfo = false;
-			$rootScope.logMenu = false;
-			$rootScope.defBrand = true;
-			$rootScope.loginBrand = false;
-			$rootScope.resBtn = false;
 			$location.path('/');
 		}
 		
