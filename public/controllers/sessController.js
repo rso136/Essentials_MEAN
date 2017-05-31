@@ -9,7 +9,11 @@ app.controller('sessCtrl', function($scope, $rootScope, $http, $sce, $location) 
 
 		if (response.data.logged_in != true) {
 			console.log('Not logged in');
-			$location.path('/')
+
+			$http.get('/logout').success(function(response){
+				console.log('Destroying session');
+			});
+			// $location.path('/')
 		}
 
 		console.log('Session email: ' + response.data.user_email);
