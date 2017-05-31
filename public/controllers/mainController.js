@@ -43,6 +43,10 @@ app.controller('mainCtrl', function($scope, $http, $sce, $location) {
 				$location.path("/nouser");
 			}
 
+			if (response == 'Password incorrect') {
+				$location.path("/nouser");
+			}
+
 			if (response == 'Login successful') {
 				$location.path("/home");
 			}

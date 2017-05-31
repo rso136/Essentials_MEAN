@@ -352,7 +352,7 @@ app.post('/login', function(req, res) {
 				  	res.send('Login successful');
 		        } else{
 			        console.log(err);
-					res.send(err);
+					res.send('Password incorrect');
 			    }
     	});
 
