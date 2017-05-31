@@ -463,6 +463,10 @@ body {
 	font-size: 2em;
 }
 
+.listItem {
+	text-transform: capitalize;
+}
+
 .shopInputBox {
 	margin-bottom: 20px;
 }

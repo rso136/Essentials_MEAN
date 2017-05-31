@@ -18,7 +18,7 @@
         <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12" id="shopListFB">
             <div ng-repeat='x in fbArrList' for="{{x}}" class='shoppingItem'>
             <form ng-submit="buyItem(buyAmtFB, x.item);">
-                <h4>{{x.item}}</h4>
+                <h4 class='listItem'>{{x.item}}</h4>
                 <div class='col-md-8 col-md-offset-2 col-xs-6 col-xs-offset-3 shopInputBox'>
                     <input ng-model="buyAmtFB" class='form-control itemQuantity' type='number' min='1' max='1000' required>
                 </div>
@@ -35,7 +35,7 @@
         <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12" id="shopListDisp">
         	<div ng-repeat='y in dispArrList' for="{{y}}" class='shoppingItem'>
                 <form ng-submit="buyItem(buyAmtDisp, y.item);">
-                <h4>{{y.item}}</h4>
+                <h4 class='listItem'>{{y.item}}</h4>
                 <div class='col-md-8 col-md-offset-2 col-xs-6 col-xs-offset-3 shopInputBox'>
                     <input ng-model="buyAmtDisp" class='form-control itemQuantity'  type='number' min='1' max='1000' required>
                 </div>
@@ -52,7 +52,7 @@
         <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12" id="shopListOther">
         	<div ng-repeat='z in otherArrList' for="{{z}}" class='shoppingItem'>
                 <form ng-submit="buyItem(buyAmtOther, z.item);">
-                <h4>{{z.item}}</h4>
+                <h4 class='listItem'>{{z.item}}</h4>
                 <div class='col-md-8 col-md-offset-2 col-xs-6 col-xs-offset-3 shopInputBox'>
                     <input ng-model="buyAmtOther" class='form-control itemQuantity'  type='number' min='1' max='1000' required>
                 </div>
