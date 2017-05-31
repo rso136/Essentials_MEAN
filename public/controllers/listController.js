@@ -7,12 +7,12 @@ app.controller('listCtrl', function($scope, $rootScope, $http, $location) {
 
 		if (response.data.logged_in != true) {
 			console.log('Not logged in');
-			$location.path('/');
 			$rootScope.userInfo = false;
 			$rootScope.logMenu = false;
 			$rootScope.defBrand = true;
 			$rootScope.loginBrand = false;
 			$rootScope.resBtn = false;
+			$location.path('/');
 		}
 		
 		console.log('Session email: ' + response.data.user_email);
