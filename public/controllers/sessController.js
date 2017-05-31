@@ -12,8 +12,9 @@ app.controller('sessCtrl', function($scope, $rootScope, $http, $sce, $location) 
 
 			$http.get('/logout').success(function(response){
 				console.log('Destroying session');
+				$location.path('/');
 			});
-			// $location.path('/')
+			
 		}
 
 		console.log('Session email: ' + response.data.user_email);

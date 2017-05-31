@@ -9,8 +9,9 @@ app.controller('listCtrl', function($scope, $rootScope, $http, $location) {
 			console.log('Not logged in');
 			$http.get('/logout').success(function(response){
 				console.log('Destroying session');
+				$location.path('/');
 			});
-			// $location.path('/')
+			
 		}
 		
 		console.log('Session email: ' + response.data.user_email);
