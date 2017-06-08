@@ -25,7 +25,6 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static('./public'));
 
-// mongoose.connect('mongodb://localhost/essentials');
 mongoose.connect('mongodb://heroku_rqdtg0ms:ufatusi0h2uhttgqh7n4e8lovp@ds157621.mlab.com:57621/heroku_rqdtg0ms');
 var db = mongoose.connection;
 
